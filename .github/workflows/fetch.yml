@@ -1,0 +1,26 @@
+name: Récupérer des médias
+on:
+  push:
+    paths: ['fetch/urls.txt']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Télécharger
+        run: |
+          mkdir -p fetch/out
+          while IFS='|' read -r name url; do
+            [ -z "$name" ] && continue
+            curl -sL --fail -o "fetch/out/$name" "$url" || echo "échec $name"
+          done < fetch/urls.txt
+          ls -la fetch/out
+      - name: Enregistrer
+        run: |
+          git config user.name "PROTECT AJA"
+          git config user.email "contact@protect-aja.com"
+          git add fetch/out
+          git commit -m "Médias récupérés" || exit 0
+          git push
