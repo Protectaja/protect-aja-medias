@@ -54,7 +54,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @keyframes pulse { 50% { transform: translate(-50%, -50%) scale(1.08); opacity: .8; } }
 .hero img { position: absolute; left: 50%; bottom: 0; height: 372px; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); }
 .who { text-align: center; margin-top: -34px; position: relative; }
-.chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--stroke); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font: 700 11.5px 'Manrope'; letter-spacing: .08em; color: var(--gold2); }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--stroke); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font: 700 11px 'Manrope'; letter-spacing: .01em; color: var(--gold2); white-space: nowrap; max-width: 100%; }
 .chip svg { width: 14px; height: 14px; }
 h1 { margin-top: 14px; font: 800 36px/1.02 'Manrope'; letter-spacing: -.035em; }
 h1 em { font: italic 600 42px 'Cormorant', serif; letter-spacing: -.01em; background: linear-gradient(100deg, var(--goldd), var(--gold2) 45%, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -148,7 +148,7 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
 
   <section class="hero rise" style="animation-delay:.08s"><div class="halo"></div><img src="portrait.webp" alt="Angélina Malerba"></section>
   <div class="who rise" style="animation-delay:.16s">
-    <div class="chip"><svg class="s" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Courtière en assurances</div>
+    <div class="chip"><svg class="s" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Courtière en assurances de biens et de personnes</div>
     <h1>Angélina <em>Malerba</em></h1>
     <p class="tag">Particuliers &amp; pros · Béziers et toute la France</p>
   </div>
