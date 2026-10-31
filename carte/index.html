@@ -49,10 +49,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .icon-btn svg { width: 18px; height: 18px; }
 
 /* profil */
-.hero { position: relative; height: 380px; margin-top: 4px; }
+.hero { position: relative; height: 380px; margin: 4px -18px 0; }
+.orbit { position: absolute; inset: 0; pointer-events: none; }
+.orbit img { position: absolute; left: 0; top: 0; width: 84px; height: 84px; object-fit: contain; will-change: transform, filter, opacity; filter: drop-shadow(0 6px 10px rgba(0,0,0,.45)) drop-shadow(0 0 12px rgba(243,217,164,.28)); }
 .hero .halo { position: absolute; left: 50%; top: 52%; width: 300px; height: 300px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(243,217,164,.6), rgba(217,178,111,.12) 55%, transparent 70%); animation: pulse 6s ease-in-out infinite; }
 @keyframes pulse { 50% { transform: translate(-50%, -50%) scale(1.08); opacity: .8; } }
-.hero img { position: absolute; left: 50%; bottom: 0; height: 372px; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); }
+.hero img.me { z-index: 2; position: absolute; left: 50%; bottom: 0; height: 372px; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); }
 .who { text-align: center; margin-top: -26px; position: relative; }
 .chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--stroke); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font: 700 11px 'Manrope'; letter-spacing: .01em; color: var(--gold2); white-space: nowrap; max-width: 100%; }
 .chip svg { width: 14px; height: 14px; }
@@ -150,7 +152,7 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
     <button class="icon-btn" id="share" aria-label="Partager"><svg class="s" viewBox="0 0 24 24"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></svg></button>
   </div>
 
-  <section class="hero rise" style="animation-delay:.08s"><div class="halo"></div><img src="portrait.webp" alt="Angélina Malerba"></section>
+  <section class="hero rise" style="animation-delay:.08s"><div class="halo"></div><img class="me" src="portrait.webp" alt="Angélina Malerba"><div class="orbit" id="orbit" aria-hidden="true"></div></section>
   <div class="who rise" style="animation-delay:.16s">
     <h1>Angélina <em>Malerba</em></h1>
     <div class="role"><span class="r1">Courtière en assurances</span><span class="r2">de biens et de personnes</span></div>
@@ -220,6 +222,35 @@ $('share').addEventListener('click', async () => {
   const data = { title: 'Angélina Malerba · PROTECT AJA', text: 'Ma courtière en assurances : étude gratuite et sans engagement.', url: location.href };
   try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(location.href); toast('Lien copié ✓'); } } catch (e) {}
 });
+
+// assurances en orbite autour du portrait
+(() => {
+  const names = ['house','car','moto','plane','boat','hat','steth','mallette','cles','taxi','poussette'];
+  const box = document.getElementById('orbit'), hero = box.parentElement;
+  const els = names.map(n => { const i = new Image(); i.src = 'orbit/' + n + '.webp'; i.alt = ''; i.decoding = 'async'; box.appendChild(i); return i; });
+  const slow = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tilt = -8 * Math.PI / 180, t0 = performance.now();
+  function frame(now) {
+    const W = hero.clientWidth, H = hero.clientHeight;
+    const cx = W / 2, cy = H * 0.68, rx = Math.min(W * 0.5, 205), ry = 58;
+    const t = (now - t0) / 1000;
+    const spin = t * (slow ? 0.12 : 0.42) + 1.4 * (1 - Math.exp(-t * 1.5));
+    const grow = Math.min(1, t / 1.1), k = 1 - Math.pow(1 - grow, 3);
+    els.forEach((el, i) => {
+      const th = spin + i * 2 * Math.PI / els.length;
+      const x0 = rx * k * Math.cos(th), y0 = ry * k * Math.sin(th) + 5 * Math.sin(t * 1.7 + i);
+      const x = cx + x0 * Math.cos(tilt) - y0 * Math.sin(tilt), y = cy + x0 * Math.sin(tilt) + y0 * Math.cos(tilt);
+      const z = Math.sin(th), d = (z + 1) / 2;
+      const sc = (0.42 + 0.48 * d) * (0.4 + 0.6 * k);
+      el.style.transform = `translate3d(${(x - 42).toFixed(1)}px, ${(y - 42).toFixed(1)}px, 0) scale(${sc.toFixed(3)}) rotate(${(6 * Math.sin(t * 1.3 + i)).toFixed(2)}deg)`;
+      el.style.zIndex = z > 0 ? 3 : 1;
+      el.style.opacity = ((0.6 + 0.4 * d) * Math.min(1, t * 2)).toFixed(2);
+      el.style.filter = z > 0 ? 'drop-shadow(0 6px 10px rgba(0,0,0,.45)) drop-shadow(0 0 12px rgba(243,217,164,.28))' : `blur(${(1.8 * (1 - d)).toFixed(2)}px) brightness(.8)`;
+    });
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 </script>
 </body>
