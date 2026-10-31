@@ -49,10 +49,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .icon-btn svg { width: 18px; height: 18px; }
 
 /* profil */
-.hero { position: relative; height: 330px; margin-top: 4px; }
-.hero .halo { position: absolute; left: 50%; top: 52%; width: 300px; height: 300px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(217,178,111,.55), rgba(217,178,111,.08) 55%, transparent 70%); animation: pulse 6s ease-in-out infinite; }
+.hero { position: relative; height: 380px; margin-top: 4px; }
+.hero .halo { position: absolute; left: 50%; top: 52%; width: 300px; height: 300px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(243,217,164,.6), rgba(217,178,111,.12) 55%, transparent 70%); animation: pulse 6s ease-in-out infinite; }
 @keyframes pulse { 50% { transform: translate(-50%, -50%) scale(1.08); opacity: .8; } }
-.hero img { position: absolute; left: 50%; bottom: 0; height: 320px; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); }
+.hero img { position: absolute; left: 50%; bottom: 0; height: 372px; transform: translateX(-50%); -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); mask-image: linear-gradient(to bottom, #000 60%, transparent 97%); }
 .who { text-align: center; margin-top: -34px; position: relative; }
 .chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--stroke); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font: 700 11.5px 'Manrope'; letter-spacing: .08em; color: var(--gold2); }
 .chip svg { width: 14px; height: 14px; }
@@ -146,10 +146,6 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
   </div>
 
   <div class="bento">
-    <button class="tile video rise" style="animation-delay:.36s" id="openVid" aria-label="Regarder ma vidéo">
-      <video src="loop.mp4" poster="poster.jpg" autoplay muted loop playsinline></video>
-      <div class="lbl"><i><svg viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></i><b>Ce qu'une courtière fait pour vous</b></div>
-    </button>
     <a class="tile rise" style="animation-delay:.42s" href="tel:+33612839536">
       <svg class="i s" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
       <div><b>Appeler</b><span>06 12 83 95 36</span></div></a>
@@ -186,20 +182,10 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
   <p class="slogan rise" style="animation-delay:.96s">Votre courtier dans tous les moments-clés</p>
   <footer>PROTECT AJA · Courtier en assurance · ORIAS n° 26008742</footer>
 </main>
-
-<div class="modal" id="modal">
-  <button class="icon-btn close" id="closeVid" aria-label="Fermer"><svg class="s" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-  <video id="full" src="video.mp4" poster="poster.jpg" playsinline controls preload="none"></video>
-</div>
 <div class="toast" id="toast"></div>
 <script>
 const $ = id => document.getElementById(id);
 const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2400); };
-const full = $('full');
-$('openVid').addEventListener('click', () => { $('modal').classList.add('open'); full.currentTime = 0; full.play(); });
-const close = () => { full.pause(); $('modal').classList.remove('open'); };
-$('closeVid').addEventListener('click', close);
-$('modal').addEventListener('click', e => { if (e.target.id === 'modal') close(); });
 let deferred = null;
 const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
 if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) $('install').style.display = 'none';
