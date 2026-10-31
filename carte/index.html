@@ -234,7 +234,7 @@ $('share').addEventListener('click', async () => {
     const W = hero.clientWidth, H = hero.clientHeight;
     const cx = W / 2, cy = H * 0.68, rx = Math.min(W * 0.5, 205), ry = 58;
     const t = (now - t0) / 1000;
-    const spin = t * (slow ? 0.12 : 0.42) + 1.4 * (1 - Math.exp(-t * 1.5));
+    const spin = t * (slow ? 0.08 : 0.2) + 0.6 * (1 - Math.exp(-t * 1.2));
     const grow = Math.min(1, t / 1.1), k = 1 - Math.pow(1 - grow, 3);
     els.forEach((el, i) => {
       const th = spin + i * 2 * Math.PI / els.length;
