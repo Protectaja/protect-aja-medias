@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angélina Malerba · PROTECT AJA</title>
+<meta name="description" content="Angélina Malerba, courtière en assurances chez PROTECT AJA. Plus de 25 assureurs comparés, étude gratuite et sans engagement.">
+<meta name="theme-color" content="#F6EFE3">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PROTECT AJA">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="Angélina Malerba · PROTECT AJA">
+<meta property="og:description" content="Votre courtier dans tous les moments-clés. Étude gratuite et sans engagement.">
+<meta property="og:image" content="icon-512.png">
+<style>
+@font-face { font-family: 'Cormorant'; src: url('cormorant.woff') format('woff'); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: 'Cormorant'; font-style: italic; src: url('cormorant-italic.woff') format('woff'); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('manrope.woff') format('woff'); font-weight: 200 800; font-display: swap; }
+:root { --ivory: #F6EFE3; --sand: #EBDDC7; --esp: #3E2312; --brown: #5B3A22; --gold: #A67C3D; --goldl: #D9B26F; --line: rgba(166,124,61,.28); }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { background: var(--ivory); }
+body { min-height: 100vh; font-family: 'Manrope', system-ui, sans-serif; color: var(--esp); background:
+  radial-gradient(90% 40% at 70% 8%, rgba(217,178,111,.32), rgba(217,178,111,0) 70%),
+  radial-gradient(70% 30% at 0% 60%, rgba(235,221,199,.9), rgba(235,221,199,0) 70%),
+  var(--ivory); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 480px; margin: 0 auto; padding: calc(env(safe-area-inset-top) + 22px) 26px calc(env(safe-area-inset-bottom) + 40px); }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 40px; height: 40px; }
+.brand span { font: 600 17px 'Cormorant', serif; letter-spacing: .32em; }
+.brand b { color: var(--gold); font-weight: 600; }
+.hero { position: relative; margin: 4px -26px 0; height: 360px; overflow: hidden; }
+.hero img { position: absolute; right: -24px; bottom: 0; height: 360px; width: auto; -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 98%); mask-image: linear-gradient(to bottom, #000 62%, transparent 98%); }
+.id { position: relative; margin-top: -58px; z-index: 2; }
+.kick { font: 800 11px 'Manrope'; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; }
+.kick i { width: 28px; height: 1.5px; background: var(--gold); display: block; }
+h1 { margin-top: 12px; font: 600 48px/0.95 'Cormorant', serif; letter-spacing: -.01em; }
+h1 em { display: block; font-style: italic; color: var(--gold); }
+.slogan { margin-top: 14px; font: italic 500 21px 'Cormorant', serif; color: var(--gold); }
+.quick { display: flex; justify-content: space-between; margin: 26px 2px 6px; }
+.quick a { display: flex; flex-direction: column; align-items: center; gap: 9px; font: 700 11.5px 'Manrope'; letter-spacing: .04em; color: var(--brown); min-width: 64px; }
+.quick svg { width: 30px; height: 30px; stroke: var(--gold); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s; }
+.quick a:active svg { transform: scale(.88); }
+.cta { margin-top: 30px; }
+.cta a.main { display: inline-flex; align-items: center; gap: 12px; font: 800 24px 'Manrope'; letter-spacing: -.01em; padding-bottom: 8px; position: relative; }
+.cta a.main::after { content: ''; position: absolute; left: 0; right: 38px; bottom: 0; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--gold), var(--goldl)); }
+.cta a.main svg { width: 26px; height: 26px; stroke: var(--gold); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.cta p { margin-top: 10px; font: 500 14.5px/1.5 'Manrope'; color: var(--brown); }
+.wa { margin-top: 22px; display: flex; align-items: center; gap: 14px; }
+.wa svg { width: 34px; height: 34px; stroke: var(--gold); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.wa small { display: block; font: 800 10.5px 'Manrope'; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+.wa strong { display: block; margin-top: 2px; font: 800 25px 'Manrope'; letter-spacing: .01em; }
+h2 { margin: 44px 0 16px; font: 800 11px 'Manrope'; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; }
+h2 i { width: 28px; height: 1.5px; background: var(--gold); display: block; }
+.video { position: relative; border-radius: 26px; overflow: hidden; aspect-ratio: 9 / 16; max-height: 70vh; margin: 0 auto; background: #2a1a0e; box-shadow: 0 24px 60px -24px rgba(62,35,18,.55); }
+.video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video .play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; color: #FFF8EE; font: 800 13px 'Manrope'; letter-spacing: .2em; text-transform: uppercase; background: linear-gradient(to top, rgba(30,15,5,.55), rgba(30,15,5,0) 50%); border: 0; cursor: pointer; }
+.video .play svg { width: 64px; height: 64px; fill: rgba(255,248,238,.95); filter: drop-shadow(0 6px 18px rgba(0,0,0,.4)); }
+.video.on .play { display: none; }
+.links a { display: flex; align-items: center; gap: 16px; padding: 17px 2px; border-bottom: 1px solid var(--line); }
+.links a:first-child { border-top: 1px solid var(--line); }
+.links svg.ic { width: 26px; height: 26px; stroke: var(--gold); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.links .t { flex: 1; }
+.links .t b { display: block; font: 800 16px 'Manrope'; }
+.links .t span { display: block; font: 500 13px 'Manrope'; color: var(--brown); opacity: .85; margin-top: 2px; }
+.links svg.go { width: 18px; height: 18px; stroke: var(--gold); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.save { margin-top: 30px; display: flex; flex-direction: column; gap: 18px; }
+.save button, .save a { display: inline-flex; align-items: center; gap: 12px; background: none; border: 0; font: 800 16px 'Manrope'; color: var(--esp); cursor: pointer; text-align: left; padding: 0; }
+.save svg { width: 24px; height: 24px; stroke: var(--gold); stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.ios { display: none; margin-top: -6px; padding-left: 36px; font: 500 13.5px/1.55 'Manrope'; color: var(--brown); }
+.ios.show { display: block; }
+.ios b { color: var(--esp); }
+.proof { margin-top: 44px; font: italic 500 22px/1.3 'Cormorant', serif; color: var(--esp); }
+.proof em { color: var(--gold); }
+footer { margin-top: 26px; font: 500 11.5px/1.6 'Manrope'; color: rgba(91,58,34,.7); }
+.toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 24px); transform: translate(-50%, 20px); opacity: 0; background: var(--esp); color: #FFF8EE; font: 700 13px 'Manrope'; padding: 12px 18px; border-radius: 999px; transition: .3s; pointer-events: none; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+@media (min-width: 520px) { .hero { margin: 8px 0 0; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand"><img src="logo.png" alt=""><span>PROTECT <b>AJA</b></span></div>
+
+  <section class="hero">
+    <img src="portrait.webp" alt="Angélina Malerba">
+  </section>
+  <div class="id">
+    <div class="kick"><i></i>Courtière en assurances</div>
+    <h1>Angélina <em>Malerba</em></h1>
+  </div>
+  <div class="slogan">Votre courtier dans tous les moments-clés</div>
+
+  <nav class="quick">
+    <a href="tel:+33612839536"><svg viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>Appeler</a>
+    <a href="https://wa.me/33612839536?text=Bonjour%20Ang%C3%A9lina%2C%20je%20souhaite%20une%20%C3%A9tude%20gratuite." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M9.2 8.6c0 3.4 2.8 6.2 6.2 6.2l.9-1.6-2-1-.8.8c-1.2-.5-2.1-1.4-2.6-2.6l.8-.8-1-2z"/></svg>WhatsApp</a>
+    <a href="mailto:contact@protect-aja.com"><svg viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>E-mail</a>
+    <a href="https://calendly.com/contact-protect-aja/30min" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="m9 15 2 2 4-4"/></svg>Rendez-vous</a>
+  </nav>
+
+  <section class="cta">
+    <a class="main" href="https://calendly.com/contact-protect-aja/30min" target="_blank" rel="noopener">Réserver mon créneau <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <p>30 minutes pour faire le point sur vos assurances. Étude gratuite et sans engagement.</p>
+    <a class="wa" href="https://wa.me/33612839536?text=Bonjour%20Ang%C3%A9lina%2C%20je%20souhaite%20une%20%C3%A9tude%20gratuite." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M9.2 8.6c0 3.4 2.8 6.2 6.2 6.2l.9-1.6-2-1-.8.8c-1.2-.5-2.1-1.4-2.6-2.6l.8-.8-1-2z"/></svg>
+      <div><small>WhatsApp</small><strong>06 12 83 95 36</strong></div>
+    </a>
+  </section>
+
+  <h2><i></i>Ce que je fais pour vous</h2>
+  <div class="video" id="vid">
+    <video src="video.mp4" poster="poster.jpg" playsinline preload="metadata"></video>
+    <button class="play" aria-label="Lire la vidéo"><svg viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>Regarder</button>
+  </div>
+
+  <h2><i></i>Me retrouver</h2>
+  <div class="links">
+    <a href="https://protect-aja.com" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+      <div class="t"><b>Site internet</b><span>protect-aja.com</span></div>
+      <svg class="go" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a href="https://www.instagram.com/protect_aja/" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6"/></svg>
+      <div class="t"><b>Instagram</b><span>@protect_aja</span></div>
+      <svg class="go" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a href="https://www.tiktok.com/@protectaja" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.6 2.6 2.5 4.4 5.2 4.6"/></svg>
+      <div class="t"><b>TikTok</b><span>@protectaja</span></div>
+      <svg class="go" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <a href="https://www.facebook.com/1085671711304747" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      <div class="t"><b>Facebook</b><span>PROTECT AJA</span></div>
+      <svg class="go" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+
+  <div class="save">
+    <a href="angelina-malerba-protect-aja.vcf" download><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>Enregistrer dans mes contacts</a>
+    <button id="install"><svg viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>Installer la carte sur mon téléphone</button>
+    <div class="ios" id="ios">Sur iPhone : touchez <b>Partager</b> en bas de Safari, puis <b>Sur l'écran d'accueil</b>. La carte s'ouvre ensuite comme une application.</div>
+    <button id="share"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51 15.42 17.49"/><path d="M15.41 6.51 8.59 10.49"/></svg>Partager la carte</button>
+  </div>
+
+  <p class="proof">Plus de <em>25 assureurs</em> comparés pour vous, particuliers et professionnels.</p>
+  <footer>PROTECT AJA · Courtier en assurance · ORIAS n° 26008742 (orias.fr)<br>contact@protect-aja.com</footer>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const toast = m => { const t = document.getElementById('toast'); t.textContent = m; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2400); };
+// vidéo
+const box = document.getElementById('vid'), v = box.querySelector('video');
+box.querySelector('.play').addEventListener('click', () => { box.classList.add('on'); v.controls = true; v.play(); });
+v.addEventListener('play', () => { box.classList.add('on'); v.controls = true; });
+// installation
+let deferred = null;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; });
+const inst = document.getElementById('install');
+if (standalone) inst.style.display = 'none';
+inst.addEventListener('click', async () => {
+  if (deferred) { deferred.prompt(); const r = await deferred.userChoice; deferred = null; if (r.outcome === 'accepted') toast('Carte installée'); }
+  else if (isIOS) document.getElementById('ios').classList.toggle('show');
+  else toast("Menu du navigateur › « Ajouter à l'écran d'accueil »");
+});
+// partage
+document.getElementById('share').addEventListener('click', async () => {
+  const data = { title: 'Angélina Malerba · PROTECT AJA', text: 'Ma courtière en assurances : étude gratuite et sans engagement.', url: location.href };
+  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(location.href); toast('Lien copié'); } } catch (e) {}
+});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>
