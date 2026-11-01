@@ -1,2 +1,13 @@
-bg_big.png|https://media.canva.com/v2/image-resize/format:PNG/height:1680/quality:100/uri:ifs%3A%2F%2FM%2F7f26da77-b9bf-4af5-b2b5-18f811552e50/watermark:F/width:944?csig=AAAAAAAAAAAAAAAAAAAAAOS0m0hoAMln_9KjEl1VDAyKcBYyTWprfF26a-7frUFP&exp=1793505193&osig=AAAAAAAAAAAAAAAAAAAAAMMDgnxxurM2eE8LFiVndXRagvMFVLPCm3Z45ZnNoQLP&signer=media-rpc&token=AAIAAU0AJDdmMjZkYTc3LWI5YmYtNGFmNS1iMmI1LTE4ZjgxMTU1MmU1MAAAAAABoZU9bCgVGbqMIJN5s4YvXoyp2PWvPseMpfpSzVrNNp6SWZ9t0Q
-bg_small.png|https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F7f26da77-b9bf-4af5-b2b5-18f811552e50/watermark:F/width:112?csig=AAAAAAAAAAAAAAAAAAAAAOS0m0hoAMln_9KjEl1VDAyKcBYyTWprfF26a-7frUFP&exp=1793505193&osig=AAAAAAAAAAAAAAAAAAAAAMMDgnxxurM2eE8LFiVndXRagvMFVLPCm3Z45ZnNoQLP&signer=media-rpc&token=AAIAAU0AJDdmMjZkYTc3LWI5YmYtNGFmNS1iMmI1LTE4ZjgxMTU1MmU1MAAAAAABoZU9bCgVGbqMIJN5s4YvXoyp2PWvPseMpfpSzVrNNp6SWZ9t0Q&x-canva-quality=thumbnail
+night_trails.mp4|https://videos.pexels.com/video-files/11372907/11372907-hd_1080_1920_60fps.mp4
+wheel.mp4|https://videos.pexels.com/video-files/19178495/19178495-hd_1080_1920_60fps.mp4
+vans_4k.mp4|https://videos.pexels.com/video-files/9701948/9701948-uhd_3840_2160_30fps.mp4
+vans_hd.mp4|https://videos.pexels.com/video-files/9701948/9701948-hd_1920_1080_30fps.mp4
+paperwork.mp4|https://videos.pexels.com/video-files/7125823/7125823-hd_1080_1920_24fps.mp4
+docs.mp4|https://videos.pexels.com/video-files/7593273/7593273-hd_1080_1920_25fps.mp4
+worried.mp4|https://videos.pexels.com/video-files/7710600/7710600-hd_1080_2048_25fps.mp4
+city_4.mp4|https://videos.pexels.com/video-files/30029522/12883724_1080_1920_30fps.mp4
+city_5.mp4|https://videos.pexels.com/video-files/30029522/12883725_1080_1920_30fps.mp4
+city_6.mp4|https://videos.pexels.com/video-files/30029522/12883726_1080_1920_30fps.mp4
+city_7.mp4|https://videos.pexels.com/video-files/30029522/12883727_1080_1920_30fps.mp4
+aerial_hwy_36.mp4|https://videos.pexels.com/video-files/34953480/14806410_1080_1920_30fps.mp4
+aerial_hwy_37.mp4|https://videos.pexels.com/video-files/34953480/14806411_1080_1920_30fps.mp4
