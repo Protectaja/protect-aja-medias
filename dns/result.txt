@@ -1,4 +1,4 @@
-Sun Nov  1 21:13:10 UTC 2026
+Sun Nov  1 21:15:03 UTC 2026
 protectaja.github.io.
 ---
 protectaja.github.io.
@@ -6,3 +6,21 @@ protectaja.github.io.
 185.199.109.153
 185.199.110.153
 185.199.111.153
+---
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 33168
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+---
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Sun, 01 Nov 2026 21:14:17 GMT
+access-control-allow-origin: *
+---
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: http://carte.protect-aja.com/carte/
+x-github-request-id: 9F06:15D024:374902:3EF97A:6AE7ABD7
