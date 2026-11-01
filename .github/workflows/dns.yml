@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          { date -u; curl -s https://carte.protect-aja.com/ | grep -o 'Faites glisser[^<]*' ; curl -sI https://carte.protect-aja.com/ | grep -i -E 'cache-control|last-modified|age:'; } > dns/result.txt
+          { date -u; curl -s https://carte.protect-aja.com/ | grep -o 'class="socials"' ; curl -sI https://carte.protect-aja.com/ | grep -i -E 'cache-control|last-modified|age:'; } > dns/result.txt
           cat dns/result.txt
           git config user.name "PROTECT AJA"; git config user.email "contact@protect-aja.com"
           git add dns/result.txt; git commit -m "Résultat DNS" || exit 0; git push
