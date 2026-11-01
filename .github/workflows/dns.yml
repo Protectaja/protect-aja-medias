@@ -1,0 +1,16 @@
+name: Vérifier DNS
+on:
+  push:
+    paths: ['dns/check.txt']
+permissions:
+  contents: write
+jobs:
+  dns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          { date -u; dig +short carte.protect-aja.com CNAME; echo ---; dig +short carte.protect-aja.com A; } > dns/result.txt
+          cat dns/result.txt
+          git config user.name "PROTECT AJA"; git config user.email "contact@protect-aja.com"
+          git add dns/result.txt; git commit -m "Résultat DNS" || exit 0; git push
