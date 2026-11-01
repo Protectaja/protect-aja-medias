@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Angélina Malerba · PROTECT AJA</title>
 <meta name="description" content="Angélina Malerba, courtière en assurances chez PROTECT AJA. Plus de 25 assureurs comparés, étude gratuite et sans engagement.">
-<meta name="theme-color" content="#140C07">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="PROTECT AJA">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta property="og:title" content="Angélina Malerba · PROTECT AJA">
 <meta property="og:description" content="Votre courtier dans tous les moments-clés. Étude gratuite et sans engagement.">
 <meta property="og:image" content="icon-512.png">
@@ -143,6 +143,34 @@ footer { margin-top: 10px; text-align: center; font: 500 11px/1.6 'Manrope'; col
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 </style>
+<style id="beige">
+:root { --bg:#FFFFFF; --ivory:#3E2312; --muted:rgba(62,35,18,.62); --gold:#B98A45; --gold2:#8A5A2B; --goldd:#6E4520;
+  --glass:#FAF7F2; --glass2:#F3EEE6; --stroke:rgba(110,69,32,.10); }
+.aura i { opacity:.22; }
+.aura i:nth-child(1) { background:#E8CFA6; } .aura i:nth-child(2) { background:#D9B26F; opacity:.28; } .aura i:nth-child(3) { background:#EBDcc4; }
+.grain { opacity:0; }
+.tile, .btn.glass, .chip, .icon-btn { box-shadow:0 14px 34px -22px rgba(62,35,18,.45); }
+.hero .halo { background:radial-gradient(circle, rgba(217,178,111,.55), rgba(217,178,111,.14) 55%, transparent 70%); }
+.orbit img { filter:drop-shadow(0 8px 12px rgba(62,35,18,.28)); }
+h1 em { background:none; -webkit-background-clip:border-box; background-clip:border-box; color:#3E2312; }
+.role .r1 { background:linear-gradient(100deg,#6E4520,#B98A45 50%,#8A5A2B); -webkit-background-clip:text; background-clip:text; }
+.role .r2 { color:#3E2312; }
+.role::after { background:linear-gradient(90deg,#B98A45,#E3C48E); }
+.btn.gold { color:#2A170A; background:linear-gradient(110deg,#C99A52,#F0D49C 48%,#D3A962); box-shadow:0 18px 40px -18px rgba(150,100,40,.6); }
+.btn.glass .arrow { background:rgba(185,138,69,.16); color:#6E4520; }
+.stat .n { background:linear-gradient(100deg,#8A5A2B,#C99A52); -webkit-background-clip:text; background-clip:text; }
+.stat span { color:#3E2312; }
+.slogan { color:#8A5A2B; }
+footer { color:rgba(62,35,18,.45); }
+.app-web { background:#fff; }
+.app { box-shadow:0 8px 18px -10px rgba(62,35,18,.45), inset 0 0 0 1px rgba(62,35,18,.06); }
+.orbit .ob { position:absolute; left:0; top:0; width:78px; height:88px; border-radius:19px; background:linear-gradient(160deg,#1E140D,#060403); box-shadow:0 14px 26px -12px rgba(30,18,8,.6), inset 0 0 0 1px rgba(243,217,164,.18); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; will-change:transform,opacity,filter; }
+.orbit .ob img { position:static; width:50px; height:50px; object-fit:contain; filter:drop-shadow(0 4px 6px rgba(0,0,0,.5)); }
+.orbit .ob span { font:800 10px 'Manrope'; letter-spacing:.02em; color:#F3D9A4; white-space:nowrap; }
+.plus { margin-top:14px; display:inline-flex; align-items:center; gap:10px; text-align:left; }
+.plus b { font:800 40px/1 'Manrope'; letter-spacing:-.04em; background:linear-gradient(100deg,#8A5A2B,#C99A52); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.plus span { font:700 14px/1.2 'Manrope'; color:#3E2312; }
+</style>
 </head>
 <body>
 <div class="aura"><i></i><i></i><i></i></div><div class="grain"></div>
@@ -156,6 +184,7 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
   <div class="who rise" style="animation-delay:.16s">
     <h1>Angélina <em>Malerba</em></h1>
     <div class="role"><span class="r1">Courtière en assurances</span><span class="r2">de biens et de personnes</span></div>
+    <div class="plus"><b>+25</b><span>assureurs comparés<br>pour vous</span></div>
     <p class="tag">Particuliers &amp; pros · Béziers et toute la France</p>
   </div>
 
@@ -184,11 +213,10 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
       <span class="app app-tt"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
       <svg class="go s" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
       <div><b>TikTok</b><span>@protectaja</span></div></a>
-    <a class="tile rise" style="animation-delay:.66s" href="https://www.facebook.com/share/1FNB787DZ3/" target="_blank" rel="noopener">
+    <a class="tile wide rise" style="animation-delay:.66s" href="https://www.facebook.com/share/1FNB787DZ3/" target="_blank" rel="noopener">
       <span class="app app-fb"><svg viewBox="0 0 24 24"><path fill="#fff" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
       <svg class="go s" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
       <div><b>Facebook</b><span>PROTECT AJA</span></div></a>
-    <div class="tile stat rise" style="animation-delay:.72s"><div><div class="n">+25</div><span>assureurs comparés pour vous</span></div></div>
 
     <a class="tile wide rise" style="animation-delay:.78s" href="https://protect-aja.com" target="_blank" rel="noopener">
       <span class="app app-web"><img src="logo.png" alt=""></span>
@@ -237,14 +265,14 @@ $('share').addEventListener('click', async () => {
 
 // assurances en orbite autour du portrait
 (() => {
-  const names = ['house','car','moto','plane','boat','hat','steth','mallette','cles','taxi','poussette'];
+  const items = [['house','Habitation'],['car','Auto'],['moto','Moto'],['plane','Voyage'],['boat','Plaisance'],['hat','Décennale'],['steth','Santé'],['mallette','Pro'],['cles','Emprunteur'],['taxi','VTC · Taxi'],['poussette','Prévoyance']];
   const box = document.getElementById('orbit'), hero = box.parentElement;
-  const els = names.map(n => { const i = new Image(); i.src = 'orbit/' + n + '.webp'; i.alt = ''; i.decoding = 'async'; box.appendChild(i); return i; });
+  const els = items.map(([n, l]) => { const d = document.createElement('div'); d.className = 'ob'; const i = new Image(); i.src = 'orbit/' + n + '.webp'; i.alt = ''; i.decoding = 'async'; const s = document.createElement('span'); s.textContent = l; d.append(i, s); box.appendChild(d); return d; });
   const slow = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const tilt = -8 * Math.PI / 180, t0 = performance.now();
   function frame(now) {
     const W = hero.clientWidth, H = hero.clientHeight;
-    const cx = W / 2, cy = H * 0.68, rx = Math.min(W * 0.5, 205), ry = 58;
+    const cx = W / 2, cy = H * 0.68, rx = Math.min(W * 0.5 - 42, 180), ry = 58;
     const t = (now - t0) / 1000;
     const spin = t * (slow ? 0.08 : 0.2) + 0.6 * (1 - Math.exp(-t * 1.2));
     const grow = Math.min(1, t / 1.1), k = 1 - Math.pow(1 - grow, 3);
@@ -253,11 +281,11 @@ $('share').addEventListener('click', async () => {
       const x0 = rx * k * Math.cos(th), y0 = ry * k * Math.sin(th) + 5 * Math.sin(t * 1.7 + i);
       const x = cx + x0 * Math.cos(tilt) - y0 * Math.sin(tilt), y = cy + x0 * Math.sin(tilt) + y0 * Math.cos(tilt);
       const z = Math.sin(th), d = (z + 1) / 2;
-      const sc = (0.42 + 0.48 * d) * (0.4 + 0.6 * k);
-      el.style.transform = `translate3d(${(x - 42).toFixed(1)}px, ${(y - 42).toFixed(1)}px, 0) scale(${sc.toFixed(3)}) rotate(${(6 * Math.sin(t * 1.3 + i)).toFixed(2)}deg)`;
+      const sc = (0.5 + 0.4 * d) * (0.4 + 0.6 * k);
+      el.style.transform = `translate3d(${(x - 39).toFixed(1)}px, ${(y - 44).toFixed(1)}px, 0) scale(${sc.toFixed(3)}) rotate(${(6 * Math.sin(t * 1.3 + i)).toFixed(2)}deg)`;
       el.style.zIndex = z > 0 ? 3 : 1;
       el.style.opacity = ((0.6 + 0.4 * d) * Math.min(1, t * 2)).toFixed(2);
-      el.style.filter = z > 0 ? 'drop-shadow(0 6px 10px rgba(0,0,0,.45)) drop-shadow(0 0 12px rgba(243,217,164,.28))' : `blur(${(1.8 * (1 - d)).toFixed(2)}px) brightness(.8)`;
+      el.style.filter = z > 0 ? 'none' : `blur(${(1.4 * (1 - d)).toFixed(2)}px)`;
     });
     requestAnimationFrame(frame);
   }
