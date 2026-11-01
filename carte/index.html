@@ -199,7 +199,7 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
   <div class="save">
     <a class="btn glass rise" style="animation-delay:.84s" href="angelina-malerba-protect-aja.vcf" download><svg class="s" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>Ajouter aux contacts</a>
     <button class="btn glass rise" style="animation-delay:.9s" id="install"><svg class="s" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>Installer l'app</button>
-    <p class="ios" id="ios">Sur iPhone : touchez <b>Partager</b> en bas de Safari, puis <b>Sur l'écran d'accueil</b>. La carte s'ouvre ensuite comme une application.</p>
+    <p class="ios" id="ios"></p>
   </div>
 
   <p class="slogan rise" style="animation-delay:.96s">Votre courtier dans tous les moments-clés</p>
@@ -210,13 +210,25 @@ svg.s { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: rou
 const $ = id => document.getElementById(id);
 const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2400); };
 let deferred = null;
+const ua = navigator.userAgent;
+function howTo() {
+  const end = "<br>La carte s'ouvre ensuite comme une application, depuis l'écran d'accueil.";
+  if (/Instagram|FBAN|FBAV|FB_IAB|musical_ly|Bytedance|TikTok|Snapchat|LinkedInApp|Line\//i.test(ua) || (isIOS && /GSA\//.test(ua)))
+    return "Vous êtes dans le navigateur intégré d'une application. Touchez <b>⋯</b> ou <b>⋮</b> en haut à droite, puis <b>Ouvrir dans le navigateur</b>. Revenez ensuite sur ce bouton.";
+  if (isIOS && /CriOS/.test(ua)) return "Sur Chrome (iPhone) : touchez l'icône <b>Partager</b> en haut à droite de la barre d'adresse, puis <b>Sur l'écran d'accueil</b>." + end;
+  if (isIOS && /FxiOS/.test(ua)) return "Sur Firefox (iPhone) : touchez le menu <b>≡</b> en bas à droite, puis <b>Partager</b>, puis <b>Sur l'écran d'accueil</b>." + end;
+  if (isIOS && /EdgiOS/.test(ua)) return "Sur Edge (iPhone) : touchez <b>Partager</b>, puis <b>Sur l'écran d'accueil</b>." + end;
+  if (isIOS) return "Sur iPhone : touchez <b>Partager</b> (le carré avec une flèche), puis <b>Sur l'écran d'accueil</b>. Si vous ne le voyez pas, faites défiler la liste vers le bas." + end;
+  if (/SamsungBrowser/.test(ua)) return "Sur Samsung Internet : touchez le menu <b>≡</b> en bas à droite, puis <b>Ajouter la page à</b>, puis <b>Écran d'accueil</b>." + end;
+  if (/Firefox/.test(ua)) return "Sur Firefox : touchez le menu <b>⋮</b>, puis <b>Ajouter à l'écran d'accueil</b>." + end;
+  return "Touchez le menu <b>⋮</b> en haut à droite du navigateur, puis <b>Installer l'application</b> ou <b>Ajouter à l'écran d'accueil</b>." + end;
+}
 const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
 if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) $('install').style.display = 'none';
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; });
 $('install').addEventListener('click', async () => {
   if (deferred) { deferred.prompt(); const r = await deferred.userChoice; deferred = null; if (r.outcome === 'accepted') toast('Carte installée ✓'); }
-  else if (isIOS) $('ios').classList.toggle('show');
-  else toast("Menu du navigateur › « Ajouter à l'écran d'accueil »");
+  else { $('ios').innerHTML = howTo(); $('ios').classList.toggle('show'); }
 });
 $('share').addEventListener('click', async () => {
   const data = { title: 'Angélina Malerba · PROTECT AJA', text: 'Ma courtière en assurances : étude gratuite et sans engagement.', url: location.href };
